@@ -1,0 +1,140 @@
+import random
+
+# Question bank for each language
+questions = {
+    "Java": {
+        "mcq": [
+            {"question": "What is the size of int in Java?", "options": ["4 bytes", "2 bytes", "8 bytes", "16 bytes"], "answer": "4 bytes"},
+            {"question": "Which keyword is used to inherit a class in Java?", "options": ["extends", "implements", "inherits", "instanceof"], "answer": "extends"},
+            {"question": "Which of these is not a Java feature?", "options":["Object-oriented", "Platform independent", "Use of pointers", "Portable"], "answer": "Use of pointers"}, 
+            {"question": "What is the default value of a boolean in Java? ", "options": ["true", "false", "0", "null"], "answer": "false"},
+            {"question": "Which method is the entry point of a Java program?  ", "options": ["main()", "start()", "run()", "init()"], "answer": "main()"},
+            {"question": "Which collection is ordered and allows duplicate elements? ", "options": ["Set", "Map", "List", "None"], "answer": "List"},
+            {"question": "What is the size of a char in Java? ", "options": ["1 byte", "2 bytes", "4 bytes", "8 bytes"], "answer": "2 bytes"},
+            {"question": "What is the superclass of all classes in Java?", "options": ["Object", "Class", "Interface", "None"], "answer": "Object"},
+            {"question": "Which Java keyword is used to create a thread? ", "options": ["extends", "implements", "Runnable", "Thread"], "answer": "implements"},
+            {"question": "Which exception is thrown when a null object is accessed?  ", "options": ["NullPointerException", "ArrayIndexOutOfBoundsException", "IOException", "ClassNotFoundException"], "answer": "NullPointerException"}
+        ],
+        "true_false": [
+            {"question": "Java supports multiple inheritance.", "answer": "False"},
+            {"question": "The default value of a boolean in Java is false.", "answer": "True"},
+            {"question": "Java supports operator overloading.", "answer": "False"},
+            {"question": "Java uses garbage collection to manage memory.", "answer": "True"},
+            {"question": "The `String` class is mutable in Java.", "answer": "False"},
+            {"question": "`ArrayList` in Java is thread-safe.", "answer": "False"},
+            {"question": "`final` keyword can be used with classes, methods, and variables.", "answer": "True"},
+            {"question": "Java allows passing methods as arguments.", "answer": "False"},
+            {"question": "Java provides built-in support for regular expressions.", "answer": "True"},
+            {"question": "Interfaces can contain concrete methods in Java 8 and later.", "answer": "True"}
+        ],
+        "one_word": [
+            {"question": "What is the method used as the entry point of a Java program?", "answer": "main"},
+            {"question": "Which access modifier is the most restrictive in Java?", "answer": "private"},
+            {"question": "What is the size of `float` in Java?", "answer": "4 bytes"},
+            {"question": "Which keyword is used to prevent method overriding?", "answer": "final"},
+            {"question": "What is the default package in Java?", "answer": "java.lang"},
+            {"question": "What is the base class of all exceptions?", "answer": "Throwable"},
+            {"question": "What keyword is used to define a constant in Java?", "answer": "final"},
+            {"question": "What is used to compile Java programs?", "answer": "javac"},
+            {"question": "What is the data type of a null reference?", "answer": "null"},
+            {"question": "What is the process of hiding implementation details called?", "answer": "encapsulation"}
+        ]
+    },
+    "C#": {
+        "mcq": [
+            {"question": "What is the size of int in C#?", "options": ["4 bytes", "2 bytes", "8 bytes", "16 bytes"], "answer": "4 bytes"},
+            {"question": "Which keyword is used to define a namespace in C#?", "options": ["namespace", "using", "package", "module"], "answer": "namespace"}
+        ],
+        "true_false": [
+            {"question": "C# supports operator overloading.", "answer": "True"},
+            {"question": "The default value of a string in C# is an empty string.", "answer": "False"}
+        ],
+        "one_word": [
+            {"question": "What is the keyword to declare a constant in C#?", "answer": "const"},
+            {"question": "Which method is used to write to the console in C#?", "answer": "WriteLine"}
+        ]
+    },
+    "Python": {
+        "mcq": [
+            {"question": "What is the output of print(2 ** 3)?", "options": ["6", "8", "9", "7"], "answer": "8"},
+            {"question": "Which keyword is used to define a function in Python?", "options": ["function", "def", "define", "func"], "answer": "def"}
+        ],
+        "true_false": [
+            {"question": "Python supports dynamic typing.", "answer": "True"},
+            {"question": "Lists are immutable in Python.", "answer": "False"}
+        ],
+        "one_word": [
+            {"question": "What is the data type of None in Python?", "answer": "NoneType"},
+            {"question": "Which method is used to add an element to a list in Python?", "answer": "append"}
+        ]
+    }
+}
+
+def ask_questions(language, question_type, num_questions):
+    selected_questions = random.sample(questions[language][question_type], num_questions)
+    score = 0
+    
+    for i, q in enumerate(selected_questions, 1):
+        print(f"\nQuestion {i}: {q['question']}")
+        
+        if question_type == "mcq":
+            for idx, option in enumerate(q['options'], 1):
+                print(f"{idx}. {option}")
+            try:
+                answer = int(input("Enter your choice (1-4): "))
+                if q['options'][answer - 1] == q['answer']:
+                    print("Correct!")
+                    score += 1
+                else:
+                    print(f"Wrong! Correct answer: {q['answer']}")
+            except (ValueError, IndexError):
+                print(f"Invalid input! Correct answer: {q['answer']}")
+        elif question_type == "true_false":
+            answer = input("Enter True or False: ").strip().capitalize()
+            if answer == q['answer']:
+                print("Correct!")
+                score += 1
+            else:
+                print(f"Wrong! Correct answer: {q['answer']}")
+        elif question_type == "one_word":
+            answer = input("Enter your answer: ").strip().lower()
+            if answer == q['answer'].lower():
+                print("Correct!")
+                score += 1
+            else:
+                print(f"Wrong! Correct answer: {q['answer']}")
+    
+    print(f"\nYour final score: {score}/{num_questions}")
+
+def main():
+    print("Welcome to the Programming Quiz!")
+    print("Choose a language: 1. Java 2. C# 3. Python")
+    try:
+        language_choice = int(input("Enter your choice (1-3): "))
+        language = ["Java", "C#", "Python"][language_choice - 1]
+    except (ValueError, IndexError):
+        print("Invalid choice! Exiting.")
+        return
+
+    print("Choose question type: 1. Multiple Choice Questions 2. True/False 3. One Word Answer")
+    try:
+        question_type_choice = int(input("Enter your choice (1-3): "))
+        question_type = ["mcq", "true_false", "one_word"][question_type_choice - 1]
+    except (ValueError, IndexError):
+        print("Invalid choice! Exiting.")
+        return
+
+    try:
+        num_questions = int(input("Enter the number of questions (5 or 10): "))
+        if num_questions not in [5, 10]:
+            print("Invalid number of questions! Exiting.")
+            return
+    except ValueError:
+        print("Invalid input! Exiting.")
+        return
+
+    print(f"\nYou have selected {language} with {num_questions} {question_type} questions.")
+    ask_questions(language, question_type, num_questions)
+
+if __name__ == "__main__":
+    main()

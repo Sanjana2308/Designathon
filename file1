@@ -83,38 +83,38 @@ questions = {
         "mcq": [
             {"question": "What is the output of print(2 ** 3)?", "options": ["6", "8", "9", "7"], "answer": "8"},
             {"question": "Which keyword is used to define a function in Python?", "options": ["function", "def", "define", "func"], "answer": "def"},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""},
-            {"question": "", "options": [""], "answer": ""}
+            {"question": "What is the data type of `None` in Python?", "options": ["str", "int", "NoneType", "bool"], "answer": "NoneType"},
+            {"question": "Which method adds an element to a list?", "options": ["add()", "append()", "insert()", "extend()"], "answer": "append()"},
+            {"question": "What is the output of `type([])`?", "options": ["list", "ListType", "<class 'list'>", "<type 'list'>"], "answer": "<class 'list'>"},
+            {"question": "What is the default value of `len([])`?", "options": ["0", "None", "1", "Error"], "answer": "0"},
+            {"question": "What does `PEP` stand for in Python?", "options": ["Python Enhancement Proposal", "Python Execution Protocol", "None", "Error"], "answer": ""},
+            {"question": "Which statement is used for exception handling?", "options": ["try", "except", "finally", "All of these"], "answer": "All of these"},
+            {"question": "What is the output of `print(10 // 3)`?", "options": ["3", "3.33", "4", "None"], "answer": "3"},
+            {"question": "What keyword is used for inheritance?", "options": ["extends", "inherits", "def", "None"], "answer": "None"}
         ],
         "true_false": [
             {"question": "Python supports dynamic typing.", "answer": "True"},
             {"question": "Lists are immutable in Python.", "answer": "False"},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""}
+            {"question": "`None` is a valid identifier in Python.", "answer": "False"},
+            {"question": "Python is case-sensitive.", "answer": "True"},
+            {"question": "Tuples are mutable in Python.", "answer": "False"},
+            {"question": "The `import` keyword is used for importing modules.", "answer": "True"},
+            {"question": "Python does not support function overloading.", "answer": "True"},
+            {"question": "Strings in Python are immutable.", "answer": "True"},
+            {"question": "Python can handle exceptions using `try` and `except`.", "answer": "True"},
+            {"question": "Indentation is optional in Python.", "answer": "False"}
         ],
         "one_word": [
             {"question": "What is the data type of None in Python?", "answer": "NoneType"},
             {"question": "Which method is used to add an element to a list in Python?", "answer": "append"},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""},
-            {"question": "", "answer": ""}
+            {"question": "What is the extension for Python files?", "answer": ".py"},
+            {"question": "What function prints output?", "answer": "print"},
+            {"question": "What is the output of `type(True)`?", "answer": "bool"},
+            {"question": "What keyword defines a class?", "answer": "class"},
+            {"question": "What is the name of the Python package manager?", "answer": "pip"},
+            {"question": "Which keyword is used to create a generator?", "answer": "yield"},
+            {"question": "What does `id()` function return?", "answer": "address"},
+            {"question": "What is the keyword to break a loop?", "answer": "break"}
         ]
     }
 }

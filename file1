@@ -43,29 +43,78 @@ questions = {
     "C#": {
         "mcq": [
             {"question": "What is the size of int in C#?", "options": ["4 bytes", "2 bytes", "8 bytes", "16 bytes"], "answer": "4 bytes"},
-            {"question": "Which keyword is used to define a namespace in C#?", "options": ["namespace", "using", "package", "module"], "answer": "namespace"}
+            {"question": "Which keyword is used to define a namespace in C#?", "options": ["namespace", "using", "package", "module"], "answer": "namespace"},
+            {"question": "Which symbol is used for comments in C#?", "options": ["//", "/* */", "#", "<!-- -->"], "answer": "//"},
+            {"question": "What is the default value of a string in C#?", "options": ["null", "empty", "undefined", '""'], "answer": "null"},
+            {"question": "Which data type is used to store decimal values in C#?", "options": ["float", "double", "decimal", "int"], "answer": "decimal"},
+            {"question": "What does `CLR` stand for in .NET?", "options": ["Common Language Runtime", "Common Link Runtime", "Code Language Runtime", "Common Local Runtime"], "answer": "Common Language Runtime"},
+            {"question": "What is the file extension for C# source files?", "options": [".java", ".cs", ".cpp", ".py"], "answer": ".cs"},
+            {"question": "Which access modifier is the most restrictive?", "options": ["private", "protected", "public", "internal"], "answer": "private"},
+            {"question": "What is the output of `Console.WriteLine(5 / 2);`?", "options": ["2", "2.5", "Error", "None"], "answer": "2"},
+            {"question": "Which operator is used to check the type of an object? ", "options": ["typeof", "is", "as", "None"], "answer": "is"}
         ],
         "true_false": [
             {"question": "C# supports operator overloading.", "answer": "True"},
-            {"question": "The default value of a string in C# is an empty string.", "answer": "False"}
+            {"question": "The default value of a string in C# is an empty string.", "answer": "False"},
+            {"question": "Strings are mutable in C#.", "answer": "False"},
+            {"question": "`var` allows dynamic typing in C#.", "answer": "False"},
+            {"question": "C# supports multiple inheritance through interfaces.", "answer": "True"},
+            {"question": "A `struct` in C# is a reference type.", "answer": "False"},
+            {"question": "Delegates in C# are type-safe.", "answer": "True"},
+            {"question": "C# supports anonymous methods.", "answer": "True"},
+            {"question": "`protected` access is more restrictive than `private`.", "answer": "False"},
+            {"question": "The `System` namespace is automatically imported in every C# program.", "answer": "True"}
         ],
         "one_word": [
             {"question": "What is the keyword to declare a constant in C#?", "answer": "const"},
-            {"question": "Which method is used to write to the console in C#?", "answer": "WriteLine"}
+            {"question": "Which method is used to write to the console in C#?", "answer": "WriteLine"},
+            {"question": "What is the main entry point for a C# program?", "answer": "Main"},
+            {"question": "What is the default access modifier for a class?", "answer": "internal"},
+            {"question": "What does `JIT` stand for?", "answer": "Just-In-Time"},
+            {"question": "What is the base class of all types in C#?", "answer": "Object"},
+            {"question": "Which data type represents true/false values?", "answer": "bool"},
+            {"question": "What is the keyword for inheritance in C#?", "answer": ":"},
+            {"question": "What operator is used for null-coalescing?", "answer": "??"},
+            {"question": "What keyword is used to handle exceptions?", "answer": "catch"}
+            
         ]
     },
     "Python": {
         "mcq": [
             {"question": "What is the output of print(2 ** 3)?", "options": ["6", "8", "9", "7"], "answer": "8"},
-            {"question": "Which keyword is used to define a function in Python?", "options": ["function", "def", "define", "func"], "answer": "def"}
+            {"question": "Which keyword is used to define a function in Python?", "options": ["function", "def", "define", "func"], "answer": "def"},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""},
+            {"question": "", "options": [""], "answer": ""}
         ],
         "true_false": [
             {"question": "Python supports dynamic typing.", "answer": "True"},
-            {"question": "Lists are immutable in Python.", "answer": "False"}
+            {"question": "Lists are immutable in Python.", "answer": "False"},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""}
         ],
         "one_word": [
             {"question": "What is the data type of None in Python?", "answer": "NoneType"},
-            {"question": "Which method is used to add an element to a list in Python?", "answer": "append"}
+            {"question": "Which method is used to add an element to a list in Python?", "answer": "append"},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""},
+            {"question": "", "answer": ""}
         ]
     }
 }
